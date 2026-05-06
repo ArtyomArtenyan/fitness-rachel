@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @theme {
 	--breakpoint-xl: 1200px;
 	--breakpoint-md: 810px;
@@ -7,6 +8,5 @@
 
 body {
 	font-weight: 500;
-	background-color: #121212;
 	color: white;
 }
