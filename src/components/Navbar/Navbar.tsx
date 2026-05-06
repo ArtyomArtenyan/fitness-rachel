@@ -66,6 +66,7 @@ const Navbar = () => {
 				setIsActive(false);
 			}
 		};
+
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
@@ -86,9 +87,6 @@ const Navbar = () => {
 				'
 			>
 				<div
-					onMouseLeave={() => {
-						setIsActive(false);
-					}}
 					className={`
 						items-start flex-col
 						gap-2.5 w-48 h-14.5 
