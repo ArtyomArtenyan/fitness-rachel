@@ -1,38 +1,31 @@
 import { useEffect, useState } from 'react';
 import Logo from '../../assets/icons/logo.svg?react';
+
+import { type IconType } from 'react-icons';
+import { BsGlobe2 } from 'react-icons/bs';
 import { FaInstagram, FaRegEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FiYoutube } from 'react-icons/fi';
-import { BsGlobe2 } from 'react-icons/bs';
 
-const socials = [
-	{
-		id: 'instagram',
-		icon: <FaInstagram />,
-		href: '#',
-	},
-	{
-		id: 'twitter',
-		icon: <FaXTwitter />,
-		href: '#',
-	},
-	{
-		id: 'youtube',
-		icon: <FiYoutube />,
-		href: '#',
-	},
-	{
-		id: 'website',
-		icon: <BsGlobe2 />,
-		href: '#',
-	},
-	{
-		id: 'email',
-		icon: <FaRegEnvelope />,
-		href: '#',
-	},
+type Social = {
+	id: string;
+	icon: IconType;
+	href: string;
+};
+
+type NavItem = {
+	id: string;
+	value: string;
+	href: string;
+};
+const socials: Social[] = [
+	{ id: 'instagram', icon: FaInstagram, href: '#' },
+	{ id: 'twitter', icon: FaXTwitter, href: '#' },
+	{ id: 'youtube', icon: FiYoutube, href: '#' },
+	{ id: 'website', icon: BsGlobe2, href: '#' },
+	{ id: 'email', icon: FaRegEnvelope, href: '#' },
 ];
-const nav = [
+const nav: NavItem[] = [
 	{
 		id: 'home',
 		value: 'Home',
@@ -164,19 +157,22 @@ const Navbar = () => {
 							))}
 						</ul>
 						<ul className='flex gap-3'>
-							{socials.map(el => (
-								<li key={el.id}>
-									<a
-										href={el.href}
-										className='
+							{socials.map(el => {
+								const Icon = el.icon;
+								return (
+									<li key={el.id}>
+										<a
+											href={el.href}
+											className='
 										flex items-center justify-center
 										w-8 h-8 rounded-full bg-black
 										xl:backdrop-blur xl:bg-[#000000a1] '
-									>
-										{el.icon}
-									</a>
-								</li>
-							))}
+										>
+											<Icon size={17} />
+										</a>
+									</li>
+								);
+							})}
 						</ul>
 					</nav>
 				</div>
