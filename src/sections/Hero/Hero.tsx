@@ -1,7 +1,6 @@
 import { IoIosStar } from 'react-icons/io';
 import { IoShieldCheckmarkOutline } from 'react-icons/io5';
 import { CiCalendar } from 'react-icons/ci';
-import { FaArrowRight } from 'react-icons/fa6';
 
 import avatar1 from '../../assets/images/39fns76RhZkslOIUwoW2fWRiGg.webp';
 import avatar2 from '../../assets/images/opAKDP2owoXDO7n6xoppYXwxfo.webp';
@@ -42,8 +41,8 @@ const Hero = () => {
 						</h1>
 					</div>
 
-					<div className='w-full max-w-full md:flex md:max-w-75 md:items-center'>
-						<div className='group flex w-full max-w-full flex-col justify-between gap-4.5 rounded-[15px] bg-[#f9652f] p-2 text-[#111111] transition-all duration-300 hover:bg-[#121212] hover:text-white md:max-w-105 md:rounded-[30px] md:px-5.5 md:py-5'>
+					<div className='group w-full max-w-full md:flex md:max-w-75 md:items-center'>
+						<div className='flex w-full max-w-full flex-col justify-between gap-4.5 rounded-[15px] bg-[#f9652f] p-2 text-[#111111] transition-all duration-300 hover:bg-[#121212] hover:text-white md:max-w-105 md:rounded-[20px] md:px-5.5 md:py-5'>
 							<div className='hidden md:block'>
 								<CiCalendar size={24} />
 							</div>
@@ -54,7 +53,11 @@ const Hero = () => {
 
 									<span className='text-xl font-medium'>Book Your Call</span>
 								</div>
-								<ArrowButton />
+								<ArrowButton
+									href='https://cal.com/'
+									bgColor='#121212'
+									bgHoverColor='bg-[#f9652f]'
+								/>
 							</div>
 						</div>
 					</div>

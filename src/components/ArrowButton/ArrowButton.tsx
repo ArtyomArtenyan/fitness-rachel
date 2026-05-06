@@ -1,10 +1,16 @@
 import { IoIosArrowRoundForward } from 'react-icons/io';
 
-const ArrowButton = () => {
+type ArrowButtonProps = {
+	href?: string;
+	bgColor: string;
+	bgHoverColor?: string;
+};
+
+const ArrowButton = ({ href, bgColor, bgHoverColor }: ArrowButtonProps) => {
 	return (
 		<a
-			className='group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-[#121212] p-3 hover:bg-[#f9652f]'
-			href='https://cal.com/'
+			className={`group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-[${bgColor}] p-3 group-hover:bg-[#f9652f]`}
+			href={href}
 			target='_blank'
 			rel='noreferrer'
 		>
