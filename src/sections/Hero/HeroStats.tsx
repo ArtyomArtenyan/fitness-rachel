@@ -1,0 +1,59 @@
+import Container from '../../components/Container';
+
+type Stat = {
+	id: number;
+	value: string;
+	title: string;
+	text: string;
+};
+const stats: Stat[] = [
+	{
+		id: 1,
+		value: '+250',
+		title: 'Women Coached',
+		text: 'From postpartum recovery to full transformations',
+	},
+	{
+		id: 2,
+		value: '98 %',
+		title: 'Consistency Rate',
+		text: 'Clients report staying on track week after week',
+	},
+	{
+		id: 3,
+		value: '5',
+		title: 'Average Feedback',
+		text: 'Based on client satisfaction and progress surveys',
+	},
+	{
+		id: 4,
+		value: '3x',
+		title: 'Faster Progress',
+		text: 'From postpartum recovery to full transformations',
+	},
+];
+export const HeroStats = () => {
+	return (
+		<div className='py-24'>
+			<Container>
+				<div
+					className='
+				grid grid-cols-1 gap-12.5 
+				md:grid-cols-2 md:gap-10 xl:grid-cols-4'
+				>
+					{stats.map(stat => (
+						<div key={stat.value} className='flex flex-col justify-start'>
+							<h2 className='text-6xl leading-none'>{stat.value}</h2>
+
+							<h3 className='mt-2 text-lg leading-7'>{stat.title}</h3>
+
+							<p className='mt-1 text-sm leading-5 text-white/70'>
+								{stat.text}
+							</p>
+						</div>
+					))}
+				</div>
+			</Container>
+		</div>
+	);
+};
