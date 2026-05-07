@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import Logo from '../../assets/icons/logo.svg?react';
 
 import { type IconType } from 'react-icons';
@@ -6,6 +7,8 @@ import { BsGlobe2 } from 'react-icons/bs';
 import { FaInstagram, FaRegEnvelope } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { FiYoutube } from 'react-icons/fi';
+
+import Container from '../Container';
 
 type Social = {
 	id: string;
@@ -79,13 +82,7 @@ const Navbar = () => {
 		  xl:w-full xl:backdrop-blur-[2px] 
 			'
 		>
-			<div
-				className='
-				max-w-380
-			 	mx-auto my-0 px-4 py-0
-			 	md:px-6 xl:px-12
-				'
-			>
+			<Container>
 				<div
 					className={`
 						items-start flex-col
@@ -174,7 +171,7 @@ const Navbar = () => {
 						</ul>
 					</nav>
 				</div>
-			</div>
+			</Container>
 		</header>
 	);
 };

@@ -9,7 +9,7 @@ type ArrowButtonProps = {
 const ArrowButton = ({ href, bgColor, bgHoverColor }: ArrowButtonProps) => {
 	return (
 		<a
-			className={`group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-[${bgColor}] p-3 group-hover:bg-[#f9652f]`}
+			className={`group relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-[${bgColor}] p-3 group-hover:${bgHoverColor}`}
 			href={href}
 			target='_blank'
 			rel='noreferrer'
