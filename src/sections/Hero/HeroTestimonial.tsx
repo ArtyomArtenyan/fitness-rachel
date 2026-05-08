@@ -23,7 +23,7 @@ export const HeroTestimonial = () => {
 					<div className='flex items-center gap-3.75 flex-nowrap'>
 						<img className='w-16.25 h-16.25 rounded-full' src={userAvatar} />
 						<div className='testimonial__card-text'>
-							<h3 className='text-xl mb-[5px]'>Sara Chen</h3>
+							<h3 className='text-xl mb-1.25'>Sara Chen</h3>
 							<span className='text-[rgb(159,159,159)]'>
 								Postnatal Reboot - November 2025
 							</span>

@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import About from './sections/About';
 import Hero, { HeroStats, HeroTestimonial } from './sections/Hero';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
 			</div>
 			<HeroStats />
 			<HeroTestimonial />
+			<About />
 		</main>
 	);
 };
