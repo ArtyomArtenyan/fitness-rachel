@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar';
-import Hero, { HeroStats } from './sections/Hero';
+import Hero, { HeroStats, HeroTestimonial } from './sections/Hero';
 
 const App = () => {
 	return (
@@ -9,6 +9,7 @@ const App = () => {
 				<Hero />
 			</div>
 			<HeroStats />
+			<HeroTestimonial />
 		</main>
 	);
 };

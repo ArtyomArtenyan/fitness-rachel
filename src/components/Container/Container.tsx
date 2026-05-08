@@ -1,11 +1,16 @@
 import React from 'react';
 
-const Container = ({ children }: { children: React.ReactNode }) => {
+type ContainerProps = {
+	children: React.ReactNode;
+	className?: string;
+};
+
+const Container = ({ children, className }: ContainerProps) => {
 	return (
 		<div
-			className='		
+			className={`
 			mx-auto w-full max-w-7xl px-4 
-			md:px-10 xl:px-12'
+			md:px-10 xl:px-12 ${className ?? ''}`}
 		>
 			{children}
 		</div>
