@@ -4,6 +4,7 @@ import { BiCrown } from 'react-icons/bi';
 
 import Container from '../../components/Container/Container';
 import aboutVideo from '../../assets/images/SRWzzhloRyGFgTTDJUqYPqiSDA.mp4';
+import { AboutMarquee } from './AboutMarquee';
 
 type Card = {
 	id: number;
@@ -102,6 +103,7 @@ const About = () => {
 						</div>
 					</div>
 				</div>
+				<AboutMarquee />
 			</Container>
 		</section>
 	);
