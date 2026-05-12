@@ -39,7 +39,7 @@ export const HeroStats = () => {
 				<div
 					className='
 				grid grid-cols-1 gap-12.5 
-				md:grid-cols-2 md:gap-10 xl:grid-cols-4'
+				md:grid-cols-2 md:gap-10 xl:grid-cols-4 lg:grid-cols-2'
 				>
 					{stats.map(stat => (
 						<div key={stat.value} className='flex flex-col justify-start'>

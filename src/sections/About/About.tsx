@@ -53,7 +53,7 @@ const About = () => {
 								Meet your coach
 							</h4>
 
-							<h2 className='text-[30px] font-semibold xl:text-5xl'>
+							<h2 className='text-[31px] md:text-[38px] xl:text-5xl'>
 								Hi, I'm Rachel Stone
 							</h2>
 

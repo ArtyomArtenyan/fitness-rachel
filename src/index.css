@@ -7,7 +7,9 @@
 	--breakpoint-md: 810px;
 	--breakpoint-lg: 390px;
 }
-
+* {
+	will-change: transform;
+}
 body {
 	font-weight: 500;
 	color: white;
