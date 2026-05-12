@@ -78,11 +78,11 @@ const Hero = () => {
 					<div
 						className='
 					group w-full max-w-full 
-					md:flex md:max-w-75 md:items-center'
+					md:flex md:max-w-75 md:flex-col xl:items-start'
 					>
 						<div
 							className='
-						flex  flex-col justify-between gap-4.5 
+						group flex  flex-col justify-between gap-1 
 						w-full max-w-full rounded-[15px] bg-[#f9652f] p-2 text-[#111111] 
 						transition-all duration-300 hover:bg-[#121212] hover:text-white 
 						md:max-w-105 md:rounded-[20px] md:px-5.5 md:py-5'
@@ -91,19 +91,22 @@ const Hero = () => {
 								<CiCalendar size={24} />
 							</div>
 
-							<div className='flex items-end justify-between'>
-								<div className='flex flex-col gap-1.5'>
-									<span className='hidden md:block'>30-min session</span>
+							<div className='flex items-center justify-between md:items-end'>
+								<div className='flex flex-col font-normal'>
+									<span className='hidden md:block '>30-min session</span>
 
-									<span className='text-xl font-medium'>Book Your Call</span>
+									<span className='text-xl '>Book Your Call</span>
 								</div>
 								<ArrowButton
 									href='https://cal.com/'
-									bgColor='#121212'
-									bgHoverColor='bg-[#f9652f]'
+									bgColor='bg-[#121212]'
+									bgHoverColor='group-hover:bg-[#f9652f]'
 								/>
 							</div>
 						</div>
+						<span className='font-normal text-[13px]'>
+							No pressure. Just a clear path forward.
+						</span>
 					</div>
 				</div>
 			</Container>
