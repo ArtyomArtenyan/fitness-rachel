@@ -1,40 +1,22 @@
 import Container from '../../components/Container/Container';
-import ArrowButton from '../../components/ArrowButton/ArrowButton';
 import { services } from './services.data';
+import SectionIntro from '../../components/SectionIntro';
 
 const Services = () => {
 	return (
 		<section className='pb-24'>
 			<Container>
 				<div className='flex flex-col justify-between gap-8.75 xl:flex-row'>
-					<div className='flex flex-col justify-center gap-2.5'>
-						<h4 className='text-[#919191]'>Services</h4>
-
-						<h2 className='text-[31px] md:text-[38px] xl:text-5xl'>
-							Choose the support
-							<span className='xl:block'> that fits your life</span>
-						</h2>
-
-						<p className='w-full max-w-110 text-[17px] leading-7.5'>
-							Flexible options to fit every budget and lifestyle, all packages
-							includes nutrition guidance and on-going weekly support
-						</p>
-
-						<div
-							className='	group flex justify-between gap-1 items-center
-					 rounded-[10px] bg-[#f9652f] p-1.5 text-[#111111] 
-						transition-all duration-300 hover:bg-[#121212] hover:text-white
-							md:max-w-66.5 '
-						>
-							<span className='w-fit'>Get Started with Rachel</span>
-
-							<ArrowButton
-								href='https://cal.com/'
-								bgColor='bg-[#121212]'
-								bgHoverColor='group-hover:bg-[#f9652f]'
-							/>
-						</div>
-					</div>
+					<SectionIntro
+						label='Services'
+						title='Choose the support'
+						text='Flexible options to fit every budget and lifestyle, all packages
+							includes nutrition guidance and on-going weekly support'
+						buttonLabel='Get Started with Rachel'
+					>
+						{' '}
+						<span className='xl:block'> that fits your life</span>
+					</SectionIntro>
 
 					<div
 						className='
