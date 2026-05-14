@@ -1,6 +1,6 @@
 import { AiOutlineFire } from 'react-icons/ai';
 import { BsLightning } from 'react-icons/bs';
-import { BiCrown } from 'react-icons/bi';
+import { LuCrown } from 'react-icons/lu';
 
 import Container from '../../components/Container/Container';
 import aboutVideo from '../../assets/images/SRWzzhloRyGFgTTDJUqYPqiSDA.mp4';
@@ -25,7 +25,7 @@ const philosophyCards: Card[] = [
 	},
 	{
 		id: 3,
-		icon: <BiCrown />,
+		icon: <LuCrown />,
 		text: 'Habits Over Quick Fixes',
 	},
 ];
@@ -49,15 +49,15 @@ const About = () => {
 					</div>
 					<div className='flex flex-col justify-between gap-10'>
 						<div className='flex flex-col gap-2.5'>
-							<h4 className='font-semibold text-[#919191] pt-1'>
+							<h4 className='font-medium text-[#919191] pt-1'>
 								Meet your coach
 							</h4>
 
-							<h2 className='text-[31px] md:text-[38px] xl:text-5xl'>
+							<h2 className='text-[31px] font-semibold md:text-[38px] xl:text-5xl'>
 								Hi, I'm Rachel Stone
 							</h2>
 
-							<div className='flex flex-col gap-2.5 font-semibold leading-7.5'>
+							<div className='flex flex-col gap-2.5 font-normal leading-7.5'>
 								<p>
 									For years, I thought strength meant doing more — training
 									harder, eating cleaner, sleeping less. I pushed through
@@ -86,7 +86,7 @@ const About = () => {
 						</div>
 
 						<div className='flex flex-col gap-3.75'>
-							<h2 className='text-xl font-semibold'>My Philosophy</h2>
+							<h2 className='text-xl font-medium'>My Philosophy</h2>
 
 							<div className='flex flex-col gap-4 min-[575px]:flex-row'>
 								{philosophyCards.map(card => (

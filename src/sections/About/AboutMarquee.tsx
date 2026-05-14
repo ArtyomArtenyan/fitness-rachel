@@ -8,14 +8,14 @@ export const AboutMarquee = () => {
 				className='flex gap-16 w-max'
 				animate={{ x: ['-50%', '0%'] }}
 				transition={{
-					duration: 20,
+					duration: 30,
 					repeat: Infinity,
 					ease: 'linear',
 				}}
 			>
 				{[...BRAND_ICONS, ...BRAND_ICONS, ...BRAND_ICONS, ...BRAND_ICONS].map(
 					(logo, i) => (
-						<img key={i} src={logo} alt='' className='h-6 w-auto opacity-30' />
+						<img key={i} src={logo} alt='' className='h-10 w-auto opacity-30' />
 					),
 				)}
 			</motion.div>

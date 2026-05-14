@@ -43,9 +43,13 @@ export const HeroStats = () => {
 				>
 					{stats.map(stat => (
 						<div key={stat.value} className='flex flex-col justify-start'>
-							<h2 className='text-6xl leading-none'>{stat.value}</h2>
+							<h2 className='text-6xl font-semibold leading-none'>
+								{stat.value}
+							</h2>
 
-							<h3 className='mt-2 text-lg leading-7'>{stat.title}</h3>
+							<h3 className='mt-2 font-medium text-lg leading-7'>
+								{stat.title}
+							</h3>
 
 							<p className='mt-1 text-sm leading-5 text-white/70'>
 								{stat.text}

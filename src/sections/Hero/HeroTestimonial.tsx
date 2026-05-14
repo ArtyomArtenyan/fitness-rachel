@@ -16,7 +16,7 @@ export const HeroTestimonial = () => {
 						<IoIosStar color='yellow' />
 						<IoIosStar color='yellow' />
 					</div>
-					<h1 className='testimonial__text text-[35px] xl:text-5xl xl:leading-none'>
+					<h1 className='text-[35px] font-semibold xl:text-5xl xl:leading-none'>
 						“After two kids, I never thought I’d feel this strong again. Rachel
 						Stone helped me rebuild my body and confidence.”
 					</h1>

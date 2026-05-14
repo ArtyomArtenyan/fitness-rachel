@@ -1,6 +1,6 @@
-import codex from '../../assets/icons/Codex.svg';
-import curseforge from '../../assets/icons/curseforge.svg';
-import bolt from '../../assets/icons/bolt.svg';
-import mocha from '../../assets/icons/mocha.svg';
+import nasm from '../../assets/icons/NASM.svg';
+import ace from '../../assets/icons/ACE.svg';
+import afaa from '../../assets/icons/AFAA.svg';
+import issa from '../../assets/icons/ISSA.svg';
 
-export const BRAND_ICONS = [codex, curseforge, bolt, mocha];
+export const BRAND_ICONS = [nasm, ace, afaa, issa];
