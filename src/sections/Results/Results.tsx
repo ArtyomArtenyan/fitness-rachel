@@ -6,7 +6,7 @@ import { ComparisonSlider } from './ComparisonSlider';
 
 const Results = () => {
 	return (
-		<section className='py-24'>
+		<section id='results' className='py-24'>
 			<Container>
 				<div className='flex flex-col gap-12 md:flex-row md:items-center md:justify-between'>
 					<div className='flex flex-col gap-6 md:max-w-125'>

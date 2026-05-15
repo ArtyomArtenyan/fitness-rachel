@@ -32,7 +32,7 @@ const philosophyCards: Card[] = [
 
 const About = () => {
 	return (
-		<section className='box-border py-24'>
+		<section id='about' className='box-border py-24'>
 			<Container>
 				<div className=' flex  flex-col justify-between xl:flex-row xl:gap-11.25'>
 					<div className='shrink-0'>

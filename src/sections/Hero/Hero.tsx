@@ -10,7 +10,7 @@ import Container from '../../components/Container/Container';
 
 const Hero = () => {
 	return (
-		<section>
+		<section id='home'>
 			<Container>
 				<div
 					className='

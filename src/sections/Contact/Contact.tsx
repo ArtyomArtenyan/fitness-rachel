@@ -46,7 +46,7 @@ const Contact = () => {
 	};
 
 	return (
-		<section className='py-24'>
+		<section id='contact' className='py-24'>
 			<Container>
 				<div className='flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between'>
 					<div className='flex flex-col gap-6 xl:max-w-130'>

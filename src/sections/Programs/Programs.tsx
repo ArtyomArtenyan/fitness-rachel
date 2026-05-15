@@ -7,7 +7,7 @@ import CTAButton from '../../components/CTAButton';
 
 const Programs = () => {
 	return (
-		<section className='py-24'>
+		<section id='programs' className='py-24'>
 			<Container>
 				<SectionIntro
 					label='For you'

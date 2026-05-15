@@ -4,7 +4,7 @@ import SectionIntro from '../../components/SectionIntro';
 
 const Services = () => {
 	return (
-		<section className='pb-24'>
+		<section id='services' className='pb-24'>
 			<Container>
 				<div className='flex flex-col justify-between gap-8.75 xl:flex-row'>
 					<SectionIntro
