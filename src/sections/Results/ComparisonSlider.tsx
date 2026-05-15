@@ -5,8 +5,8 @@ import { LiaArrowsAltHSolid } from 'react-icons/lia';
 
 export const ComparisonSlider = () => {
 	const [imageRevealFraq, setImageRevealFraq] = useState(0.5);
-
 	const imageContainer = useRef<HTMLDivElement>(null);
+	const [isDragging, setIsDragging] = useState(false);
 
 	const slide = (xPosition: number): void => {
 		if (!imageContainer.current) return;
@@ -16,6 +16,7 @@ export const ComparisonSlider = () => {
 	};
 
 	const hendleMouseDown = (): void => {
+		setIsDragging(true);
 		window.onmousemove = hendleMouseMove;
 		window.onmouseup = hendleMouseUp;
 	};
@@ -24,6 +25,8 @@ export const ComparisonSlider = () => {
 		slide(event.clientX);
 	};
 	const hendleMouseUp = (): void => {
+		setIsDragging(false);
+
 		window.onmousemove = null;
 		window.onmouseup = null;
 	};
@@ -49,15 +52,31 @@ export const ComparisonSlider = () => {
 
 			<div
 				style={{ left: `${imageRevealFraq * 100}%` }}
-				className='absolute inset-y-0 -translate-x-1/2'
+				className={`absolute inset-y-0 -translate-x-1/2 ${isDragging ? '' : 'transition-all duration-300'}`}
 			>
-				<div className='h-full w-0.5 bg-white/60' />
+				<div className='h-full w-0.5 bg-white/60 ' />
 				<div
 					onMouseDown={hendleMouseDown}
-					className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg'
+					className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-lg '
 				>
 					<LiaArrowsAltHSolid size={19} color='black' />
 				</div>
+			</div>
+			<div
+				onClick={() => setImageRevealFraq(0)}
+				className='absolute bottom-4 left-4'
+			>
+				<span className='rounded-lg bg-white/30 px-5 py-2 text-sm font-semibold text-white backdrop-blur-sm'>
+					Before
+				</span>
+			</div>
+			<div
+				onClick={() => setImageRevealFraq(1)}
+				className='absolute bottom-4 right-4'
+			>
+				<span className='rounded-lg bg-white/30 px-5 py-2 text-sm font-semibold text-white backdrop-blur-sm'>
+					After
+				</span>
 			</div>
 		</div>
 	);
