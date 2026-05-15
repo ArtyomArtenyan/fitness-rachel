@@ -6,6 +6,7 @@ type SectionIntroProps = {
 	title: string;
 	text: string;
 	buttonLabel?: string;
+	buttonType?: 'primary' | 'secondary';
 	position?: 'left' | 'center';
 	children?: React.ReactNode;
 };
@@ -15,6 +16,7 @@ const SectionIntro = ({
 	title,
 	text,
 	buttonLabel,
+	buttonType,
 	position = 'left',
 	children,
 }: SectionIntroProps) => {
@@ -36,7 +38,7 @@ const SectionIntro = ({
 
 			<p
 				className={`
-					max-w-120 w-full
+					 w-full
 					text-[16px]
 					font-medium
 					tracking-[-0.01em]
@@ -47,7 +49,7 @@ const SectionIntro = ({
 				{text}
 			</p>
 
-			{buttonLabel && <CTAButton label={buttonLabel} />}
+			{buttonLabel && <CTAButton variant={buttonType} label={buttonLabel} />}
 		</div>
 	);
 };

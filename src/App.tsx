@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar';
 import About from './sections/About';
+import Contact from './sections/Contact';
+import Faq from './sections/Faq';
 import Hero, { HeroStats, HeroTestimonial } from './sections/Hero';
 import Process from './sections/Process';
 import Programs from './sections/Programs';
@@ -20,6 +22,8 @@ const App = () => {
 			<Process />
 			<Programs />
 			<Results />
+			<Faq />
+			<Contact />
 		</main>
 	);
 };

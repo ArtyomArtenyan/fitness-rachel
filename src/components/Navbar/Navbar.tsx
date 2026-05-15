@@ -91,7 +91,7 @@ const Navbar = () => {
 						backdrop-blur-[10px] bg-[rgba(0,0,0,0.65)] 
 						transition-[width,height,border-radius] duration-300 ease-in-out
 						${isActive ? 'items-start w-68 h-112' : ''}
-						xl:flex xl:h-auto xl:w-full xl:flex-row xl:items-center xl:justify-between xl:bg-transparent 
+						xl:flex xl:h-auto xl:w-full xl:flex-row xl:items-center xl:justify-between xl:bg-transparent  xl:px-0
 
 					`}
 				>
