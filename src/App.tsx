@@ -3,6 +3,7 @@ import About from './sections/About';
 import Hero, { HeroStats, HeroTestimonial } from './sections/Hero';
 import Process from './sections/Process';
 import Programs from './sections/Programs';
+import Results from './sections/Results';
 import Services from './sections/Services';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
 			<Services />
 			<Process />
 			<Programs />
+			<Results />
 		</main>
 	);
 };
