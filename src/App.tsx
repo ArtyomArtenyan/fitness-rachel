@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import About from './sections/About';
 import Contact from './sections/Contact';
@@ -13,6 +14,7 @@ const App = () => {
 		<main id='home' className='bg-[#121212]'>
 			<div className='bg-[url(./assets/images/dw9FDUcCUVRV9StGpW0X4yNrXWo.png)] bg-cover bg-right bg-no-repeat min-h-screen flex flex-col justify-end'>
 				<Navbar />
+
 				<Hero />
 			</div>
 			<HeroStats />
@@ -24,6 +26,8 @@ const App = () => {
 			<Results />
 			<Faq />
 			<Contact />
+
+			<Footer />
 		</main>
 	);
 };
