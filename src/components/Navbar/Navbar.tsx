@@ -97,6 +97,7 @@ const Navbar = () => {
 				>
 					<div
 						className='
+					 cursor-pointer
 					flex justify-between
 					w-full
 					xl:w-auto'
@@ -107,7 +108,9 @@ const Navbar = () => {
 						w-21.25 
 						xl:w-46.25'
 						>
-							<Logo />
+							<a href='#home'>
+								<Logo />
+							</a>
 						</div>
 						<button
 							className='w-11 h-10 relative flex items-center justify-center bg-none border-none p-0 xl:hidden'
@@ -143,7 +146,7 @@ const Navbar = () => {
 							{nav.map(el => (
 								<li key={el.id}>
 									<a
-										className=' hover:text-[rgba(218,218,218,0.742)]'
+										className='hover:text-[#f9652f] transition-all duration-300'
 										href={el.href}
 									>
 										{el.value}

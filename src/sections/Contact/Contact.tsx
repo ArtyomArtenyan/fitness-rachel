@@ -6,6 +6,7 @@ import Container from '../../components/Container';
 import SectionIntro from '../../components/SectionIntro';
 import ArrowButton from '../../components/ArrowButton/ArrowButton';
 import CTAButton from '../../components/CTAButton';
+import FadeIn from '../../components/FadeIn';
 
 type ContactOption = {
 	id: number;
@@ -46,9 +47,9 @@ const Contact = () => {
 	};
 
 	return (
-		<section id='contact' className='py-24'>
+		<section id='contact' className='py-24 scroll-mt-20'>
 			<Container>
-				<div className='flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between'>
+				<FadeIn direction='up' className='flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between'>
 					<div className='flex flex-col gap-6 xl:max-w-130'>
 						<SectionIntro
 							label='Contact'
@@ -125,7 +126,7 @@ const Contact = () => {
 
 						<CTAButton label='Send Message' className='md:max-w-full' />
 					</div>
-				</div>
+				</FadeIn>
 			</Container>
 		</section>
 	);

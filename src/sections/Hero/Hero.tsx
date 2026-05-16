@@ -7,10 +7,11 @@ import avatar2 from '../../assets/images/opAKDP2owoXDO7n6xoppYXwxfo.webp';
 
 import ArrowButton from '../../components/ArrowButton/ArrowButton';
 import Container from '../../components/Container/Container';
+import FadeIn from '../../components/FadeIn';
 
 const Hero = () => {
 	return (
-		<section id='home'>
+		<section id='home' className='scroll-mt-96'>
 			<Container>
 				<div
 					className='
@@ -66,13 +67,15 @@ const Hero = () => {
 							</div>
 						</div>
 
-						<h1
-							className='
-						w-full max-w-196.25 text-[32px] font-normal leading-none tracking-[-0.04em] 
-						lg:text-[40px] md:max-w-165 md:text-[52px] xl:max-w-196.25 xl:text-[65px]'
-						>
-							Because your best self isn’t behind you, it’s ahead
-						</h1>
+						<FadeIn direction='up'>
+							<h1
+								className='
+							w-full max-w-196.25 text-[32px] font-normal leading-none tracking-[-0.04em] 
+							lg:text-[40px] md:max-w-165 md:text-[52px] xl:max-w-196.25 xl:text-[65px]'
+							>
+								Because your best self isn’t behind you, it’s ahead
+							</h1>
+						</FadeIn>
 					</div>
 
 					<div

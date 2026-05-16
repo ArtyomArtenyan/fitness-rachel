@@ -5,6 +5,7 @@ import { LuCrown } from 'react-icons/lu';
 import Container from '../../components/Container/Container';
 import aboutVideo from '../../assets/images/SRWzzhloRyGFgTTDJUqYPqiSDA.mp4';
 import { AboutMarquee } from './AboutMarquee';
+import FadeIn from '../../components/FadeIn';
 
 type Card = {
 	id: number;
@@ -32,10 +33,10 @@ const philosophyCards: Card[] = [
 
 const About = () => {
 	return (
-		<section id='about' className='box-border py-24'>
+		<section id='about' className='scroll-mt-20 py-24'>
 			<Container>
 				<div className=' flex  flex-col justify-between xl:flex-row xl:gap-11.25'>
-					<div className='shrink-0'>
+					<FadeIn direction='right' className='shrink-0'>
 						<video
 							autoPlay
 							loop
@@ -46,9 +47,9 @@ const About = () => {
 							<source src={aboutVideo} type='video/mp4' />
 							Your browser does not support the video tag.
 						</video>
-					</div>
+					</FadeIn>
 					<div className='flex flex-col justify-between gap-10'>
-						<div className='flex flex-col gap-2.5'>
+						<FadeIn direction='left' className='flex flex-col gap-2.5'>
 							<h4 className='font-medium text-[#919191] pt-1'>
 								Meet your coach
 							</h4>
@@ -83,7 +84,7 @@ const About = () => {
 							<span className='mt-2.5 -rotate-3 text-end font-signature text-[32px] font-normal'>
 								Rachel Stone
 							</span>
-						</div>
+						</FadeIn>
 
 						<div className='flex flex-col gap-3.75'>
 							<h2 className='text-xl font-medium'>My Philosophy</h2>

@@ -3,13 +3,15 @@ import Container from '../../components/Container';
 import resultsAvatar from '../../assets/images/y34ltRyclfKWHicOlS7aoZUlPQ.webp';
 import { IoStar } from 'react-icons/io5';
 import { ComparisonSlider } from './ComparisonSlider';
+import Faq from '../Faq';
+import FadeIn from '../../components/FadeIn';
 
 const Results = () => {
 	return (
-		<section id='results' className='py-24'>
+		<section id='results' className='py-24 scroll-mt-20'>
 			<Container>
 				<div className='flex flex-col gap-12 md:flex-row md:items-center md:justify-between'>
-					<div className='flex flex-col gap-6 md:max-w-125'>
+					<FadeIn direction='left' className='flex flex-col gap-6 md:max-w-125'>
 						<SectionIntro
 							label='Results'
 							title='Progress you can see'
@@ -39,11 +41,14 @@ const Results = () => {
 							— and the changes haven't just been physical, they've been mental
 							too."
 						</p>
-					</div>
+					</FadeIn>
 
-					<ComparisonSlider />
+					<FadeIn direction='right'>
+						<ComparisonSlider />
+					</FadeIn>
 				</div>
 			</Container>
+			<Faq />
 		</section>
 	);
 };

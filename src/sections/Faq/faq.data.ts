@@ -1,13 +1,11 @@
-import { useState } from 'react';
-
-type quation = {
+type question = {
 	id: number;
 	title: string;
 	text: string;
 	isActive: boolean;
 };
 
-export const quations: quation[] = [
+export const questions: question[] = [
 	{
 		id: 1,
 		title: 'What should I expect during my first session?',

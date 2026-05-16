@@ -1,20 +1,21 @@
 import { useState } from 'react';
 import Container from '../../components/Container';
 import SectionIntro from '../../components/SectionIntro';
-import { quations } from './faq.data';
+import { questions } from './faq.data';
+import FadeIn from '../../components/FadeIn';
 
 const Faq = () => {
 	const [active, setActive] = useState<number[]>([]);
 
-	const hendleClick = (id: number): void => {
+	const handleClick = (id: number): void => {
 		setActive(prev =>
 			prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id],
 		);
 	};
 	return (
-		<div className='py-24'>
+		<section className='pt-48'>
 			<Container>
-				<div className='flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between'>
+				<FadeIn direction='up' className='flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between'>
 					<div className='flex flex-col gap-6 xl:max-w-125'>
 						<SectionIntro
 							label='FAQ'
@@ -27,18 +28,18 @@ const Faq = () => {
 						</SectionIntro>
 					</div>
 					<div className='flex flex-col '>
-						{quations.map(quation => {
-							const isOpen = active.includes(quation.id);
+						{questions.map(question => {
+							const isOpen = active.includes(question.id);
 							return (
 								<div
-									key={quation.id}
+									key={question.id}
 									className='group border-b border-[#919191] py-5 transition-all duration-500 hover:border-white'
 								>
 									<button
-										onClick={() => hendleClick(quation.id)}
+										onClick={() => handleClick(question.id)}
 										className='flex w-full items-center justify-between gap-5 text-left cursor-pointer'
 									>
-										<span className='text-lg'>{quation.title}</span>
+										<span className='text-lg'>{question.title}</span>
 
 										<div className='relative h-5 w-5 shrink-0'>
 											<span className='absolute left-1/2 top-1/2 h-0.5 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white' />
@@ -63,7 +64,7 @@ const Faq = () => {
 									>
 										<div className='overflow-hidden'>
 											<p className='leading-7 text-[#919191] text-[15px]'>
-												{quation.text}
+												{question.text}
 											</p>
 										</div>
 									</div>
@@ -71,9 +72,9 @@ const Faq = () => {
 							);
 						})}
 					</div>
-				</div>
+				</FadeIn>
 			</Container>
-		</div>
+		</section>
 	);
 };
 

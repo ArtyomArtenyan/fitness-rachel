@@ -27,10 +27,9 @@ const SectionIntro = ({
 			<h4 className='text-[#919191]'>{label}</h4>
 
 			<h2
-				className={`text-[31px] font-semibold md:text-[38px] xl:text-5xl ${
-					position == 'center' ? 'text-center' : ''
-				}`}
-				text-center
+				className={`text-[31px] font-semibold md:text-[38px] ${
+					position === 'left' ? '' : 'text-center'
+				} xl:text-5xl`}
 			>
 				{title}
 				{children ?? ''}

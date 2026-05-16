@@ -1,4 +1,5 @@
 import Container from '../../components/Container';
+import FadeIn from '../../components/FadeIn';
 
 type Stat = {
 	id: number;
@@ -41,20 +42,22 @@ export const HeroStats = () => {
 				grid grid-cols-1 gap-12.5 
 				md:grid-cols-2 md:gap-10 xl:grid-cols-4 lg:grid-cols-2'
 				>
-					{stats.map(stat => (
-						<div key={stat.value} className='flex flex-col justify-start'>
-							<h2 className='text-6xl font-semibold leading-none'>
-								{stat.value}
-							</h2>
+					{stats.map((stat, index) => (
+						<FadeIn key={stat.value} direction='up' delay={index * 0.1}>
+							<div className='flex flex-col justify-start'>
+								<h2 className='text-6xl font-semibold leading-none'>
+									{stat.value}
+								</h2>
 
-							<h3 className='mt-2 font-medium text-lg leading-7'>
-								{stat.title}
-							</h3>
+								<h3 className='mt-2 font-medium text-lg leading-7'>
+									{stat.title}
+								</h3>
 
-							<p className='mt-1 text-sm leading-5 text-white/70'>
-								{stat.text}
-							</p>
-						</div>
+								<p className='mt-1 text-sm leading-5 text-white/70'>
+									{stat.text}
+								</p>
+							</div>
+						</FadeIn>
 					))}
 				</div>
 			</Container>

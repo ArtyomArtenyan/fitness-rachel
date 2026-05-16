@@ -5,7 +5,7 @@ import SectionIntro from '../../components/SectionIntro';
 
 const Process = () => {
 	return (
-		<section className='py-24'>
+		<section className='pt-48'>
 			<Container>
 				<div className='flex flex-col justify-between gap-7.5 md:flex-row'>
 					<div className='flex flex-col gap-2.5'>
