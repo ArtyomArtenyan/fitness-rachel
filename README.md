@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Fitness Rachel - Personal Training & Fitness Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance fitness portfolio website built with React 19, TypeScript, and Tailwind CSS. This project showcases personal training services, fitness programs, and client results with smooth animations and a premium aesthetic.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Design:** Optimized for all screen sizes from mobile to desktop.
+- **Dynamic Animations:** Smooth scroll reveals and interactive elements powered by Framer Motion.
+- **Client Results:** Interactive comparison slider for transformation showcases.
+- **Comprehensive Sections:**
+  - **Hero:** Impactful introduction with key stats and testimonials.
+  - **Services & Programs:** Detailed breakdown of fitness offerings.
+  - **About:** Personal branding and background.
+  - **Contact:** Lead generation form for potential clients.
+  - **FAQ:** Frequently asked questions for quick information.
+- **Performance Optimized:** Built with Vite for lightning-fast development and optimized production builds.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/) & [SVGR](https://react-svgr.com/)
+- **Typography:** General Sans & Covered By Your Grace (signature font)
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+├── assets/             # Images, icons, and local fonts
+├── components/         # Reusable UI components (Buttons, Navbar, Footer, etc.)
+├── sections/           # Large page sections (Hero, About, Services, etc.)
+├── App.tsx             # Main application layout
+├── index.css           # Global styles and Tailwind configuration
+└── main.tsx            # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fitness-rachel.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd fitness-rachel
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
 ```
+The application will be available at `http://localhost:5173`.
+
+### Build
+
+Create a production-ready build:
+```bash
+npm run build
+```
+The output will be in the `dist/` folder.
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
